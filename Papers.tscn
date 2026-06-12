@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c2vul86pncswi"]
+
+[ext_resource type="Script" uid="uid://dmiopdjpnml3g" path="res://ScriptsR/GivenPapers.gd" id="1_v3021"]
+[ext_resource type="Script" uid="uid://civhm4uap6yc3" path="res://ScriptsR/RealOrNot.gd" id="2_dkxs2"]
+
+[node name="General" type="Control" unique_id=642765057]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_v3021")
+
+[node name="Papers" type="Control" parent="." unique_id=684111255]
+anchors_preset = 0
+
+[node name="Cargo" type="Button" parent="Papers" unique_id=1106384032]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 294.0
+offset_right = 119.0
+offset_bottom = 317.0
+
+[node name="LicensePlate" type="Button" parent="Papers" unique_id=226723266]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 322.0
+offset_right = 119.0
+offset_bottom = 345.0
+
+[node name="DriverLastName" type="Button" parent="Papers" unique_id=404013799]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 72.0
+offset_right = 274.0
+offset_bottom = 95.0
+
+[node name="Gender" type="Button" parent="Papers" unique_id=1813955305]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 138.0
+offset_right = 116.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 64
+
+[node name="CarType" type="Button" parent="Papers" unique_id=133706305]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 234.0
+offset_right = 118.0
+offset_bottom = 257.0
+
+[node name="Origin" type="Button" parent="Papers" unique_id=1620351253]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 261.0
+offset_right = 116.0
+offset_bottom = 284.0
+
+[node name="Destination" type="Button" parent="Papers" unique_id=1591577583]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 264.0
+offset_right = 227.0
+offset_bottom = 287.0
+
+[node name="DriverName" type="Button" parent="Papers" unique_id=225445537]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 73.0
+offset_right = 193.0
+offset_bottom = 96.0
+
+[node name="Node" type="Node" parent="." unique_id=5122992 node_paths=PackedStringArray("papers_node")]
+script = ExtResource("2_dkxs2")
+papers_node = NodePath("../Papers")
