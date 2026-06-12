@@ -23,6 +23,10 @@ DialogueManager="*uid://c3rodes2l3gxb"
 
 runtime/balloon_path="res://DialoguesRS/balloon.tscn"
 
+[dotnet]
+
+project/assembly_name="Dialogos-MecanicaCoffe"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
