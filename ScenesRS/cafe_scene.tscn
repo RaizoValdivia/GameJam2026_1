@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://lyt01adc6o3v"]
 
 [ext_resource type="Script" uid="uid://cja0ae7aac37r" path="res://ScriptsRS/CafeineProgress.gd" id="1_1eeuv"]
+[ext_resource type="Texture2D" uid="uid://cbybi4o03qhfd" path="res://SpritesRS/4-_taza.png" id="2_6wik1"]
 
 [node name="CafeScene" type="Node2D" unique_id=2119463875]
 
-[node name="ControlNode" type="Control" parent="." unique_id=9575954]
+[node name="CoffeeBar" type="Control" parent="." unique_id=9575954]
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -16,7 +17,7 @@ offset_bottom = 655.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="ControlNode" unique_id=216183944]
+[node name="ProgressBar" type="ProgressBar" parent="CoffeeBar" unique_id=216183944]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -30,21 +31,27 @@ offset_bottom = -36.0
 grow_horizontal = 0
 grow_vertical = 0
 max_value = 15.0
+show_percentage = false
 script = ExtResource("1_1eeuv")
 
-[node name="CoffeButton" type="Button" parent="ControlNode" unique_id=1162690490]
+[node name="CoffeButton" type="Button" parent="CoffeeBar" unique_id=1162690490]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -185.5
-offset_top = -42.0
-offset_right = -111.0
-offset_bottom = 32.5
+offset_left = -100.5
+offset_top = -181.0
+offset_right = -26.0
+offset_bottom = -106.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "COFFE"
 
-[connection signal="pressed" from="ControlNode/CoffeButton" to="ControlNode/ProgressBar" method="_on_coffe_button_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="CoffeeBar/CoffeButton" unique_id=2034393753]
+position = Vector2(45, 47)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("2_6wik1")
+
+[connection signal="pressed" from="CoffeeBar/CoffeButton" to="CoffeeBar/ProgressBar" method="_on_coffe_button_pressed"]

@@ -1,66 +1,111 @@
-[gd_scene format=3 uid="uid://ddqlcfgvasod"]
+[gd_scene format=3 uid="uid://buv1jdcjycrjj"]
 
-[ext_resource type="Texture2D" uid="uid://biwhmjvwehhgy" path="res://SpritesRS/image-1.png" id="1_l4qof"]
+[ext_resource type="Texture2D" uid="uid://dv7n1l5h02mr2" path="res://SpritesRS/1-_barra.png" id="2_d1btd"]
 [ext_resource type="Script" uid="uid://cja0ae7aac37r" path="res://ScriptsRS/CafeineProgress.gd" id="2_tsa2k"]
 [ext_resource type="Texture2D" uid="uid://xo2t8h5sm506" path="res://SpritesRS/Juan_Jose_de_la_cruz.png" id="3_1tuqx"]
+[ext_resource type="Texture2D" uid="uid://bf4phwyv2jiyh" path="res://SpritesRS/2-_ventana.png" id="3_bbkkd"]
+[ext_resource type="Texture2D" uid="uid://vjflc2ar1474" path="res://SpritesRS/3-_mesa.png" id="4_vn3d2"]
+[ext_resource type="Texture2D" uid="uid://b4vts81m1p23o" path="res://SpritesRS/5_-_hoja_parametros.png" id="5_yv8id"]
+[ext_resource type="Texture2D" uid="uid://ck6s7kfdlwsuv" path="res://SpritesRS/6_-_sombra_negra.png" id="6_qvld6"]
+[ext_resource type="Texture2D" uid="uid://cbybi4o03qhfd" path="res://SpritesRS/4-_taza.png" id="8_qmbnx"]
 
-[node name="Interface" type="Node2D" unique_id=116333847]
+[node name="Interface" type="Node2D" unique_id=720431108]
 
-[node name="Interface" type="TextureRect" parent="." unique_id=563898869]
-offset_right = 1151.0
-offset_bottom = 647.0
-texture = ExtResource("1_l4qof")
+[node name="People" type="Node" parent="." unique_id=418296501]
 
-[node name="CoffeeBar" type="Control" parent="." unique_id=1011268358]
+[node name="TextureRect" type="TextureRect" parent="People" unique_id=109098635]
+offset_left = 264.0
+offset_top = 41.0
+offset_right = 512.0
+offset_bottom = 362.0
+texture = ExtResource("3_1tuqx")
+
+[node name="Cabina" type="Node" parent="." unique_id=1594725926]
+
+[node name="Barra" type="TextureRect" parent="Cabina" unique_id=1491977256]
+offset_left = 684.0
+offset_top = 64.0
+offset_right = 960.0
+offset_bottom = 413.0
+texture = ExtResource("2_d1btd")
+
+[node name="Ventana" type="TextureRect" parent="Cabina" unique_id=1251450681]
+offset_right = 1440.0
+offset_bottom = 804.99994
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_bbkkd")
+
+[node name="Mesa" type="TextureRect" parent="Cabina" unique_id=1093095352]
+offset_left = 78.99999
+offset_top = 349.00003
+offset_right = 1277.0
+offset_bottom = 710.25
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_vn3d2")
+
+[node name="Hoja" type="TextureRect" parent="Cabina" unique_id=1947923647]
+offset_left = 17.0
+offset_top = 24.0
+offset_right = 182.0
+offset_bottom = 478.0
+texture = ExtResource("5_yv8id")
+
+[node name="Sombra" type="TextureRect" parent="Cabina" unique_id=380235713]
+offset_left = -120.0
+offset_top = -17.0
+offset_right = 1320.0
+offset_bottom = 683.0
+texture = ExtResource("6_qvld6")
+
+[node name="Coffe" type="Node" parent="." unique_id=1122385293]
+
+[node name="CoffeeBar" type="Control" parent="Coffe" unique_id=1991680637]
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 452.0
-offset_top = 521.0
-offset_right = 1153.0
-offset_bottom = 655.0
+offset_left = -695.0
+offset_top = 513.0
+offset_right = 6.0
+offset_bottom = 647.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 
-[node name="ProgressBar" type="ProgressBar" parent="CoffeeBar" unique_id=1185397894]
+[node name="ProgressBar" type="ProgressBar" parent="Coffe/CoffeeBar" unique_id=868054069]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -407.0
-offset_top = -88.0
-offset_right = -16.0
-offset_bottom = -22.0
+offset_left = -428.0
+offset_top = -102.0
+offset_right = -37.0
+offset_bottom = -36.0
 grow_horizontal = 0
 grow_vertical = 0
 max_value = 15.0
 show_percentage = false
 script = ExtResource("2_tsa2k")
 
-[node name="CoffeButton" type="Button" parent="CoffeeBar" unique_id=1533761935]
+[node name="CoffeButton" type="Button" parent="Coffe/CoffeeBar" unique_id=149046837]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -102.5
-offset_top = -234.0
-offset_right = 100.5
-offset_bottom = -31.0
+offset_left = -100.5
+offset_top = -181.0
+offset_right = -26.0
+offset_bottom = -106.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "COFFEE"
+text = "COFFE"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=779321687]
-offset_left = 292.0
-offset_top = 88.0
-offset_right = 540.0
-offset_bottom = 409.0
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("3_1tuqx")
+[node name="Sprite2D" type="Sprite2D" parent="Coffe/CoffeeBar/CoffeButton" unique_id=593982821]
+position = Vector2(45, 47)
+scale = Vector2(0.535, 0.535)
+texture = ExtResource("8_qmbnx")
 
-[connection signal="pressed" from="CoffeeBar/CoffeButton" to="CoffeeBar/ProgressBar" method="_on_coffe_button_pressed"]
+[connection signal="pressed" from="Coffe/CoffeeBar/CoffeButton" to="Coffe/CoffeeBar/ProgressBar" method="_on_coffe_button_pressed"]
