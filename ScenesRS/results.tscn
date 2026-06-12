@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://18fjqpexgd17"]
+
+[ext_resource type="PackedScene" uid="uid://dl6yjgdje002w" path="res://ScenesRS/dialogues_scene.tscn" id="1_r1how"]
+[ext_resource type="PackedScene" uid="uid://lyt01adc6o3v" path="res://ScenesRS/cafe_scene.tscn" id="2_3cjc3"]
+
+[node name="Results" type="Node2D" unique_id=76498760]
+
+[node name="DialoguesScene" parent="." unique_id=1702459356 instance=ExtResource("1_r1how")]
+
+[node name="CafeScene" parent="." unique_id=2119463875 instance=ExtResource("2_3cjc3")]

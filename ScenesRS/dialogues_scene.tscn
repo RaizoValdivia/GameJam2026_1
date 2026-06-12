@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dl6yjgdje002w"]
+
+[ext_resource type="Script" uid="uid://d4ms35vdt6evn" path="res://ScriptsRS/GameManager.gd" id="1_6yv0o"]
+[ext_resource type="Texture2D" uid="uid://blw1g3nska7bg" path="res://SpritesRS/bus-ael-02-1.png" id="1_qqj68"]
+[ext_resource type="Texture2D" uid="uid://blp66fbesiers" path="res://SpritesRS/bus-cruzero-suite.png" id="2_6yv0o"]
+[ext_resource type="Texture2D" uid="uid://bossn6evq1usb" path="res://SpritesRS/buses-home-interprovincial-zeus-5.png" id="3_s62sn"]
+
+[node name="DialoguesScene" type="Node2D" unique_id=1702459356]
+script = ExtResource("1_6yv0o")
+
+[node name="Control" type="Control" parent="." unique_id=2053909756]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1169.0
+offset_bottom = 652.0
+
+[node name="Bus1" type="Button" parent="Control" unique_id=221237233]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -95.0
+offset_right = -84.5
+offset_bottom = -63.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6, 6)
+
+[node name="SpriteBus1" type="Sprite2D" parent="Control/Bus1" unique_id=49655860]
+position = Vector2(23.166668, 16.833334)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_qqj68")
+
+[node name="Bus2" type="Button" parent="Control" unique_id=918433189]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.5
+offset_top = -73.999985
+offset_right = -467.8333
+offset_bottom = -40.833313
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6, 6)
+
+[node name="SpriteBus2" type="Sprite2D" parent="Control/Bus2" unique_id=1828694622]
+position = Vector2(19.833336, 17.166664)
+scale = Vector2(0.12397662, 0.1460055)
+texture = ExtResource("2_6yv0o")
+
+[node name="Bus3" type="Button" parent="Control" unique_id=1105870457]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 231.5
+offset_top = -94.0
+offset_right = 543.5
+offset_bottom = 133.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpriteBus3" type="Sprite2D" parent="Control/Bus3" unique_id=1783978188]
+position = Vector2(152, 114)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_s62sn")
+
+[connection signal="pressed" from="Control/Bus1" to="." method="_on_bus_1_pressed"]
+[connection signal="pressed" from="Control/Bus2" to="." method="_on_bus_2_pressed"]
+[connection signal="pressed" from="Control/Bus3" to="." method="_on_bus_3_pressed"]
