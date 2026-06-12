@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4llnoj178lrf"]
+
+[ext_resource type="PackedScene" uid="uid://qagwkty7ulu0" path="res://Scenes/herramienta.tscn" id="1_xbbuf"]
+[ext_resource type="Script" uid="uid://c1rqu028ft8nw" path="res://Scripts/herramienta.gd" id="2_pom55"]
+[ext_resource type="Script" uid="uid://cs8i8e3058svf" path="res://Scenes/generador.gd" id="5_rvbu3"]
+
+[node name="Node2D" type="Node2D" unique_id=1405658834]
+
+[node name="Generador" type="Node2D" parent="." unique_id=16269321]
+script = ExtResource("5_rvbu3")
+
+[node name="Herramienta" parent="." unique_id=50972462 groups=["Player"] instance=ExtResource("1_xbbuf")]
+position = Vector2(684, 349)
+script = ExtResource("2_pom55")
